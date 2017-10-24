@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wastopology xmlns="http://www.gr.ibm.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gr.ibm.com wastopology.xsd">
+	<server name="mysrv" nodename="mynodeNode01">
+		<application name="app1" earfileptrn="app1-ear." vhost="default_host"></application>
+		<application name="app2" earfileptrn="app2-sample-ear." vhost="default_host">
+			<webserver name="ihs1" nodename="ihs1-node"/>
+			<webserver name="ihs2" nodename="ihs2-node"/>
+		</application>
+		<application name="app3" earfileptrn="app3-sample-ear." vhost="default_host">
+			<sharedlib name="My Shared lib"/>
+			<webserver name="ihs1" nodename="ihs1-node"/>
+		</application>
+	</server>
+	<cluster name="mycluster">
+		<application name="app4" earfileptrn="app4-ear-" vhost="default_host">
+			<webserver name="ihs1" nodename="ihs1-node"/>
+		</application>
+	</cluster>
+</wastopology>
