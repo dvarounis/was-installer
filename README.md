@@ -1,7 +1,7 @@
 # was-installer
 ## WAS Application Deployment Script
 
-WAS-installer is a tool for deploying a group of applications (delivered in EAR form) in a WAS Cell. 
+WAS-installer is a tool for deploying a group of applications (delivered in EAR form) in a IBM WebSphere Application Server Cell. 
 It works using a system directory (preferably on dmgr server) as a hotfolder where deployable EARs lie and an xml document (conventionally named topology.xml) that describes the Application Topology in the Cell.
 The tool is composed by two files:  
 1. A jython file named installer.py containing the wsadmin code that does the actual job 
