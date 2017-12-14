@@ -11,12 +11,13 @@ trap sigcatch INT TERM
 DMGR_HOME="/opt/ibm/websphere/appserver/profiles/Dmgr01"
 CONNECTOR_TYPE="RMI"
 CONNECTOR_PORT=9809
-WSADMIN_PARAMS='-javaoption "-Xms256m -Xmx4096m"'
+WSADMIN_HEAPSZ="-Xms256m -Xmx4096m"
 
 ################################################  Local Parameters  ################################################################
 
-BINDIR="$HOME/bin/binaries"
-TOPOLOGYXML=$HOME/bin/topology.xml
+CURRENTDIR=$(pwd)
+BINDIR="$CURRENTDIR/binaries"
+TOPOLOGYXML=$CURRENTDIR/topology.xml
 LOGDIR=$HOME/logs
 PID=$$
 LOGFILE=$LOGDIR/installer.$PID.log
@@ -126,7 +127,7 @@ do
 done
 
 
-$DMGR_HOME/bin/wsadmin.sh -lang jython -conntype $CONNECTOR_TYPE -port $CONNECTOR_PORT $WSADMIN_PARAMS -f $HOME/bin/installer.py $FSSFLAG $BINDIR $TOPOLOGYXML | tee -a $LOGFILE
+$DMGR_HOME/bin/wsadmin.sh -lang jython -conntype $CONNECTOR_TYPE -port $CONNECTOR_PORT -javaoption "$WSADMIN_HEAPSZ" -f $CURRENTDIR/installer.py $FSSFLAG $BINDIR $TOPOLOGYXML | tee -a $LOGFILE
 
 
 #set +x
