@@ -15,7 +15,7 @@ WSADMIN_HEAPSZ="-Xms256m -Xmx4096m"
 
 ################################################  Local Parameters  ################################################################
 
-CURRENTDIR=$(pwd)
+CURRENTDIR="$( cd "$(dirname "$0")" ; pwd -P )"
 BINDIR="$CURRENTDIR/binaries"
 TOPOLOGYXML=$CURRENTDIR/topology.xml
 LOGDIR=$HOME/logs
