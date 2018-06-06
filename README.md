@@ -1,5 +1,5 @@
 # was-installer
-## Application Deployment Tool for WebSphere Application Server
+## Application Deployment Tool for WebSphere Application Server(Traditional)
 
 WAS-installer is a tool for deploying a group of applications (delivered in EAR form) in a IBM WebSphere Application Server Cell. 
 It works using a system directory (preferably on dmgr server) as a hotfolder where deployable EARs lie and an xml document (conventionally named topology.xml) that describes the Application Topology in the Cell.
