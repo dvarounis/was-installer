@@ -9,6 +9,7 @@ The tool is composed by two files:
 
 ## Usage 
 - Run `git clone https://github.com/dvarounis/was-installer.git` into your WAS user $HOME
+- Check "DMGR Parameters" section in installer.sh and edit any parameter that may be different in your WAS environment
 - Edit topology.sample.xml to match your WAS application topology
 - Run `installer.sh [ <ear-url1> <ear-url2> ...]`
 
